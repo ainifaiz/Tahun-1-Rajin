@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#fffaf3">
+  <title>Roda Perasaan Kerjasama</title>
+  <link rel="stylesheet" href="roda-style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div>
+        <p class="kicker">PENDIDIKAN MORAL TAHUN 1 · SP 12.4</p>
+        <h1>😊 RODA PERASAAN KERJASAMA</h1>
+        <p class="subtitle">Bagaimana perasaan kamu selepas bekerjasama?</p>
+      </div>
+      <button id="soundBtn" class="small-btn" aria-pressed="true">🔊 BUNYI ON</button>
+    </header>
+
+    <section class="turn-card" aria-live="polite">
+      <span>👧🧒 Giliran Murid</span>
+      <strong id="turnText">1 / 11</strong>
+    </section>
+
+    <section id="mainScreen" class="screen active">
+      <div class="wheel-wrap">
+        <div class="pointer" aria-hidden="true">▼</div>
+        <div id="wheel" class="wheel" role="img" aria-label="Roda perasaan">
+          <div class="wheel-label l1"><span>😄</span><b>SERONOK</b></div>
+          <div class="wheel-label l2"><span>😊</span><b>GEMBIRA</b></div>
+          <div class="wheel-label l3"><span>😌</span><b>PUAS HATI</b></div>
+          <div class="wheel-label l4"><span>😟</span><b>SEDIH</b></div>
+          <div class="wheel-label l5"><span>😢</span><b>KECEWA</b></div>
+          <div class="wheel-center">🤝</div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="spinBtn" class="btn primary">🎡 PUTAR RODA</button>
+        <button id="chooseBtn" class="btn secondary">😊 PILIH PERASAAN SAYA</button>
+        <button id="resetBtn" class="btn ghost">🔄 MULA SEMULA</button>
+      </div>
+      <p class="teacher-tip">Guru boleh tanya: “Mengapa kamu berasa begitu?”</p>
+    </section>
+
+    <section id="confirmScreen" class="screen">
+      <div id="bigEmoji" class="big-emoji">😊</div>
+      <h2 id="pickedName">GEMBIRA</h2>
+      <p class="question">Adakah ini perasaan kamu selepas bekerjasama?</p>
+      <div class="actions two">
+        <button id="yesBtn" class="btn primary">✅ YA</button>
+        <button id="otherBtn" class="btn secondary">🔄 PILIH EMOJI LAIN</button>
+      </div>
+    </section>
+
+    <section id="chooseScreen" class="screen">
+      <h2>😊 Pilih perasaan kamu</h2>
+      <p>Tekan satu kad yang paling sesuai.</p>
+      <div id="emotionCards" class="emotion-grid"></div>
+      <button id="backBtn" class="btn ghost">← KEMBALI</button>
+    </section>
+
+    <section id="sentenceScreen" class="screen">
+      <div id="sentenceEmoji" class="big-emoji">😊</div>
+      <h2 id="sentenceTitle">SAYA BERASA GEMBIRA</h2>
+      <div id="sentenceGuide" class="sentence-box">“Saya berasa gembira kerana __________.”</div>
+      <h3>Contoh jawapan</h3>
+      <div id="examples" class="examples"></div>
+      <div class="followup">
+        <strong>Soalan guru:</strong>
+        <span id="followupText">Mengapa kamu berasa begitu?</span>
+      </div>
+      <button id="nextBtn" class="btn primary next">➡️ MURID SETERUSNYA</button>
+    </section>
+
+    <section id="finishScreen" class="screen finish">
+      <div class="stars" aria-hidden="true">🌟 ✨ 🌟</div>
+      <h2>SYABAS SEMUA!</h2>
+      <p>Kita mempunyai perasaan yang berbeza, tetapi kita boleh terus bekerjasama dan membantu antara satu sama lain.</p>
+      <div class="friends" aria-label="Murid pelbagai kaum bekerjasama">🧒🏻 🤝 👧🏽 🤝 🧒🏾 🤝 👧🏻</div>
+      <button id="playAgainBtn" class="btn primary">🔄 MAIN SEMULA</button>
+    </section>
+
+    <div id="confetti" class="confetti" aria-hidden="true"></div>
+  </main>
+  <script src="roda-script.js"></script>
+</body>
+</html>
